@@ -1,6 +1,6 @@
 @font-face {
     font-family: "opta sans";
-    src: url(ABeeZee-Regular.ttf) format("truetype");
+    src: url('https://cdn.rawgit.com/OptimumPartners/v3/master/files/ABeeZee-Regular.ttf') format("truetype");
 }
 body, h1, h2, h3, h4, h5, h6 {
     font-family: "opta sans", sans-serif
