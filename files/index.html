@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>OPTA Report</title>
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="OPTA report for API testing" name="description">
+		<meta content="Optimum Partners" name="author">
+		<link rel="stylesheet" type="text/css" href="font-awesome.min.css">
+		<link href="style-template.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="jquery-min.js"></script>
+		<script type="text/javascript" src="jquery-ui.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+
+	</head>
+	<body>
+		<div class="page-top">
+			<div class="page-title">
+				<h1>SecurityScoreCard
+					<span>API tesing dashboard</span>
+                 </h1>
+                 <span class="page-sub-title">By Optimum Partners</span>
+			</div>
+			<div class="widgets">
+				<div class="row">
+					<div class="col-4">
+						<div class="widget hidden">
+						<div class="icon">
+                            <i class="fa fa-bolt"></i>
+                        </div>
+						<h3 class="font-blue">
+							9
+						</h3>
+						<span class="title">executed</span>
+						<div class="progress-info">
+                            <div class="progress">
+                                <span style="width: 100%;" class="progress-bar progress-bar-success blue">
+                                    <span class="sr-only">100% progress</span>
+                                </span>
+                            </div>
+                            <div class="status">
+                                <div class="status-title"> progress </div>
+                                <div class="status-number"> 100% </div>
+                            </div>
+                        </div>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="widget hidden">
+						<div class="icon">
+                            <i class="fa fa-thumbs-o-up"></i>
+                        </div>
+						<h3 class="font-green">
+							9
+						</h3>
+						<span class="title">Passed</span>
+						<div class="progress-info">
+                            <div class="progress">
+                                <span style="width: 100%;" class="progress-bar progress-bar-success green">
+                                    <span class="sr-only">100% progress</span>
+                                </span>
+                            </div>
+                            <div class="status">
+                                <div class="status-title"> progress </div>
+                                <div class="status-number"> 100% </div>
+                            </div>
+                        </div>
+						</div>
+					</div>
+					
+					<div class="col-4">
+						<div class="widget hidden">
+						<div class="icon">
+                            <i class="fa fa-thumbs-o-down"></i>
+                        </div>
+						<h3 class="font-red">
+							0
+						</h3>
+						<span class="title">failed</span>
+						<div class="progress-info">
+                            <div class="progress">
+                                <span style="width: 0%;" class="progress-bar progress-bar-success red">
+                                    <span class="sr-only">0% progress</span>
+                                </span>
+                            </div>
+                            <div class="status">
+                                <div class="status-title"> progress </div>
+                                <div class="status-number"> 0% </div>
+                            </div>
+                        </div>
+						</div>
+					</div>
+					
+					<div class="col-4">
+						<div class="widget hidden">
+						<h4>
+							<i class="fa fa-calendar-o"></i>
+							Aug 25 2016  01:28 PM</h4>
+						<h4>
+							<i class="fa fa-cogs"></i>
+							Production</h4>
+						<h4>
+							<i class="fa fa-toggle-on"></i>
+							Group: vendors
+							</h4>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="page-body">
+		<div class="row">
+			<div class="col-1">
+				<div class="wrapper">
+					<div class="wrapper-title">
+						<h1>Scenarios</h1>
+						<ul>
+							<li class="active"><a key="all" href="#">All</a></li>
+							<li><a key="passed" href="#">Passed</a></li>
+							<li><a key="failed" href="#">Failed</a></li>
+						</ul>
+					</div>
+					<div class="wrapper-body">
+						<ul class="feeds">
+							<li class="story-title"><i class="fa fa-caret-right"></i>MalwareChart<small>(1 scenario)</small></li><li>
+	<span class="icon passed">
+		<i class="fa fa-check"></i>
+	</span>
+	<span class="title">
+		verify requird fields of malware list
+	</span>
+	<div class="options">
+		<a href="#" class="blue" dialog_id="steps_ae2990b6-a812-488c-9bbd-699c4c37e4bd">
+			<i class="fa fa-file-code-o" title="Show story"></i>
+			<span>Story</span>
+		</a>
+		<a href="#" class="green" disabled>
+			<i class="fa fa-history" title="Scenario history"></i>
+			<span>History</span>
+		</a>
+		<a href="#" class="red" disabled dialog_id="errors_ae2990b6-a812-488c-9bbd-699c4c37e4bd">
+			<i class="fa fa-times" title="Show errors"></i>
+			<span>Errors</span>
+		</a>
+	</div>
+	<div id="errors_ae2990b6-a812-488c-9bbd-699c4c37e4bd" class="dialog-opt dialog-errors">
+		<ul></ul>
+	</div>
+	<div id="steps_ae2990b6-a812-488c-9bbd-699c4c37e4bd" class="dialog-opt dialog-steps">
+		<ul><li><span class="keyword">Given</span> the api service is: http://service.securityscorecard.io:8080/malware/[vendor_domain]?from=[from...</li><li><span class="keyword">And</span> the queryParameters are: <table border="1"><body><tr><th>name</th><th>value</th></tr><tr><td>vendor_domain</td><td>test.com</td></tr><tr><td>from_date</td><td>2016&shy;-07-&shy;10T00:00:00.000Z</td></tr></body></table>
+</li><li><span class="keyword">When</span> service method is GET</li><li><span class="keyword">And</span> use basic authentication</li><li><span class="keyword">Then</span> the service response code should be 200</li><li><span class="keyword">And</span> verify required fileds: <table border="1"><body><tr><th>name</th></tr><tr><td>malware_1</td></tr><tr><td>malware_2</td></tr><tr><td>malware_1[*].lastSeen</td></tr></body></table>
+</li></ul>
+	</div>
+</li><li class="story-title"><i class="fa fa-caret-right"></i>vendor<small>(8 scenarios)</small></li><li>
+	<span class="icon passed">
+		<i class="fa fa-check"></i>
+	</span>
+	<span class="title">
+		verify requird fields of vendors list
+	</span>
+	<div class="options">
+		<a href="#" class="blue" dialog_id="steps_8ba2ec16-1364-4582-bc70-93fded95f8cb">
+			<i class="fa fa-file-code-o" title="Show story"></i>
+			<span>Story</span>
+		</a>
+		<a href="#" class="green" disabled>
+			<i class="fa fa-history" title="Scenario history"></i>
+			<span>History</span>
+		</a>
+		<a href="#" class="red" disabled dialog_id="errors_8ba2ec16-1364-4582-bc70-93fded95f8cb">
+			<i class="fa fa-times" title="Show errors"></i>
+			<span>Errors</span>
+		</a>
+	</div>
+	<div id="errors_8ba2ec16-1364-4582-bc70-93fded95f8cb" class="dialog-opt dialog-errors">
+		<ul></ul>
+	</div>
+	<div id="steps_8ba2ec16-1364-4582-bc70-93fded95f8cb" class="dialog-opt dialog-steps">
+		<ul><li><span class="keyword">Given</span> the api service is: http://service.securityscorecard.io:8080/v3/groups/[customer_id]/vendors/</li><li><span class="keyword">And</span> the queryParameters are: <table border="1"><body><tr><th>name</th><th>value</th></tr><tr><td>customer_id</td><td>57ac6924e4b08e6470bcbd7a</td></tr></body></table>
+</li><li><span class="keyword">When</span> service method is GET</li><li><span class="keyword">And</span> use basic authentication</li><li><span class="keyword">Then</span> the service response code should be 200</li><li><span class="keyword">And</span> verify required fileds: <table border="1"><body><tr><th>name</th></tr><tr><td>entries</td></tr><tr><td>total</td></tr><tr><td>page</td></tr><tr><td>size</td></tr><tr><td>totalPages</td></tr></body></table>
+</li></ul>
+	</div>
+</li><li>
+	<span class="icon passed">
+		<i class="fa fa-check"></i>
+	</span>
+	<span class="title">
+		verify vendors entries
+	</span>
+	<div class="options">
+		<a href="#" class="blue" dialog_id="steps_8f302b6d-733e-4ef5-8ab6-709655e68414">
+			<i class="fa fa-file-code-o" title="Show story"></i>
+			<span>Story</span>
+		</a>
+		<a href="#" class="green" disabled>
+			<i class="fa fa-history" title="Scenario history"></i>
+			<span>History</span>
+		</a>
+		<a href="#" class="red" disabled dialog_id="errors_8f302b6d-733e-4ef5-8ab6-709655e68414">
+			<i class="fa fa-times" title="Show errors"></i>
+			<span>Errors</span>
+		</a>
+	</div>
+	<div id="errors_8f302b6d-733e-4ef5-8ab6-709655e68414" class="dialog-opt dialog-errors">
+		<ul></ul>
+	</div>
+	<div id="steps_8f302b6d-733e-4ef5-8ab6-709655e68414" class="dialog-opt dialog-steps">
+		<ul><li><span class="keyword">Given</span> using previous returned result</li><li><span class="keyword">Then</span> verify required fileds in array entries with: <table border="1"><body><tr><th>name</th></tr><tr><td>vendorId</td></tr><tr><td>domain</td></tr><tr><td>vendorName</td></tr><tr><td>industry</td></tr><tr><td>industryCode</td></tr><tr><td>lastScanDate</td></tr><tr><td>score</td></tr><tr><td>percentile</td></tr><tr><td>grade</td></tr><tr><td>lastMonthChange</td></tr><tr><td>inProgress</td></tr><tr><td>stats</td></tr><tr><td>stats.indicators</td></tr><tr><td>stats.indicators.informational</td></tr><tr><td>stats.indicators.informational.value</td></tr><tr><td>stats.indicators.informational.industry</td></tr><tr><td>stats.indicators.threat</td></tr><tr><td>stats.indicators.threat.value</td></tr><tr><td>stats.indicators.threat.industry</td></tr><tr><td>name</td></tr><tr><td>URL</td></tr></body></table>
+</li></ul>
+	</div>
+</li><li>
+	<span class="icon passed">
+		<i class="fa fa-check"></i>
+	</span>
+	<span class="title">
+		verify data types for vendors list
+	</span>
+	<div class="options">
+		<a href="#" class="blue" dialog_id="steps_9c6a5ccf-73df-4698-84f0-affbc21f8ebc">
+			<i class="fa fa-file-code-o" title="Show story"></i>
+			<span>Story</span>
+		</a>
+		<a href="#" class="green" disabled>
+			<i class="fa fa-history" title="Scenario history"></i>
+			<span>History</span>
+		</a>
+		<a href="#" class="red" disabled dialog_id="errors_9c6a5ccf-73df-4698-84f0-affbc21f8ebc">
+			<i class="fa fa-times" title="Show errors"></i>
+			<span>Errors</span>
+		</a>
+	</div>
+	<div id="errors_9c6a5ccf-73df-4698-84f0-affbc21f8ebc" class="dialog-opt dialog-errors">
+		<ul></ul>
+	</div>
+	<div id="steps_9c6a5ccf-73df-4698-84f0-affbc21f8ebc" class="dialog-opt dialog-steps">
+		<ul><li><span class="keyword">Given</span> using previous returned result</li><li><span class="keyword">Then</span> verify data type for fileds <table border="1"><body><tr><th>name</th><th>type</th></tr><tr><td>total</td><td>INTEGER</td></tr><tr><td>page</td><td>INTEGER</td></tr><tr><td>size</td><td>INTEGER</td></tr><tr><td>totalPages</td><td>INTEGER</td></tr><tr><td>entries[*].lastScanDate</td><td>DATE</td></tr><tr><td>entries[*].score</td><td>INTEGER</td></tr><tr><td>entries[*].percentile</td><td>INTEGER</td></tr><tr><td>entries[*].lastMonthChange</td><td>INTEGER</td></tr><tr><td>entries[*].inProgress</td><td>BOOL</td></tr><tr><td>entries[*].stats.indicators.informational.value</td><td>DOUBLE</td></tr><tr><td>entries[*].stats.indicators.informational.industry</td><td>DOUBLE</td></tr><tr><td>entries[*].stats.indicators.threat.value</td><td>DOUBLE</td></tr><tr><td>entries[*].stats.indicators.threat.industry</td><td>DOUBLE</td></tr></body></table>
+</li></ul>
+	</div>
+</li><li>
+	<span class="icon passed">
+		<i class="fa fa-check"></i>
+	</span>
+	<span class="title">
+		verify data length for vendors list
+	</span>
+	<div class="options">
+		<a href="#" class="blue" dialog_id="steps_47c4893f-bb40-4bd5-b3b1-c869208f0678">
+			<i class="fa fa-file-code-o" title="Show story"></i>
+			<span>Story</span>
+		</a>
+		<a href="#" class="green" disabled>
+			<i class="fa fa-history" title="Scenario history"></i>
+			<span>History</span>
+		</a>
+		<a href="#" class="red" disabled dialog_id="errors_47c4893f-bb40-4bd5-b3b1-c869208f0678">
+			<i class="fa fa-times" title="Show errors"></i>
+			<span>Errors</span>
+		</a>
+	</div>
+	<div id="errors_47c4893f-bb40-4bd5-b3b1-c869208f0678" class="dialog-opt dialog-errors">
+		<ul></ul>
+	</div>
+	<div id="steps_47c4893f-bb40-4bd5-b3b1-c869208f0678" class="dialog-opt dialog-steps">
+		<ul><li><span class="keyword">Given</span> using previous returned result</li><li><span class="keyword">Then</span> verify data length for fileds <table border="1"><body><tr><th>name</th><th>length</th></tr><tr><td>entries</td><td>1+</td></tr><tr><td>entries[*].vendorId</td><td>24</td></tr><tr><td>entries[*].industry</td><td>4+</td></tr><tr><td>entries[*].grade</td><td>1</td></tr></body></table>
+</li></ul>
+	</div>
+</li><li>
+	<span class="icon passed">
+		<i class="fa fa-check"></i>
+	</span>
+	<span class="title">
+		verify data patterns for vendors list
+	</span>
+	<div class="options">
+		<a href="#" class="blue" dialog_id="steps_83b3b339-b309-4463-9b7a-95ad2a1876fe">
+			<i class="fa fa-file-code-o" title="Show story"></i>
+			<span>Story</span>
+		</a>
+		<a href="#" class="green" disabled>
+			<i class="fa fa-history" title="Scenario history"></i>
+			<span>History</span>
+		</a>
+		<a href="#" class="red" disabled dialog_id="errors_83b3b339-b309-4463-9b7a-95ad2a1876fe">
+			<i class="fa fa-times" title="Show errors"></i>
+			<span>Errors</span>
+		</a>
+	</div>
+	<div id="errors_83b3b339-b309-4463-9b7a-95ad2a1876fe" class="dialog-opt dialog-errors">
+		<ul></ul>
+	</div>
+	<div id="steps_83b3b339-b309-4463-9b7a-95ad2a1876fe" class="dialog-opt dialog-steps">
+		<ul><li><span class="keyword">Given</span> using previous returned result</li><li><span class="keyword">Then</span> verify data matchin pattern for fileds <table border="1"><body><tr><th>name</th><th>pattern</th></tr><tr><td>entries[*].domain</td><td>^((https?)://)?[a-z0-9]+([-.]{1}[a-z0-9]+)*.[a-z]{2,5}(:[0-9]{1,5})?(/.*)?$</td></tr><tr><td>entries[*].URL</td><td>^(https?://)?([da-z.-]+).([a-z.]{2,6})([/w .-]*)*/?$</td></tr></body></table>
+</li></ul>
+	</div>
+</li><li>
+	<span class="icon passed">
+		<i class="fa fa-check"></i>
+	</span>
+	<span class="title">
+		verify data range for vendors list
+	</span>
+	<div class="options">
+		<a href="#" class="blue" dialog_id="steps_8eaf7946-5c83-4303-beff-9375ff95bb57">
+			<i class="fa fa-file-code-o" title="Show story"></i>
+			<span>Story</span>
+		</a>
+		<a href="#" class="green" disabled>
+			<i class="fa fa-history" title="Scenario history"></i>
+			<span>History</span>
+		</a>
+		<a href="#" class="red" disabled dialog_id="errors_8eaf7946-5c83-4303-beff-9375ff95bb57">
+			<i class="fa fa-times" title="Show errors"></i>
+			<span>Errors</span>
+		</a>
+	</div>
+	<div id="errors_8eaf7946-5c83-4303-beff-9375ff95bb57" class="dialog-opt dialog-errors">
+		<ul></ul>
+	</div>
+	<div id="steps_8eaf7946-5c83-4303-beff-9375ff95bb57" class="dialog-opt dialog-steps">
+		<ul><li><span class="keyword">Given</span> using previous returned result</li><li><span class="keyword">Then</span> verify data within range: <table border="1"><body><tr><th>name</th><th>range</th></tr><tr><td>entries[*].industryCode</td><td>HOSPITALITY,HEALTHCARE,EDUCATION,ENERGY,LEGAL,PHARMACEUTICAL,INFORMATION_SE...</td></tr><tr><td>entries[*].score</td><td>[0-100]</td></tr><tr><td>entries[*].percentile</td><td>[0-100]</td></tr><tr><td>entries[*].grade</td><td>[A-F]</td></tr><tr><td>entries[*].lastMonthChange</td><td>[0-100]</td></tr><tr><td>entries[*].stats.indicators.informational.value</td><td>[0-100]</td></tr><tr><td>entries[*].stats.indicators.informational.industry</td><td>[0-100]</td></tr><tr><td>entries[*].stats.indicators.threat.value</td><td>[0-100]</td></tr><tr><td>entries[*].stats.indicators.threat.industry</td><td>[0-100]</td></tr></body></table>
+</li></ul>
+	</div>
+</li><li>
+	<span class="icon passed">
+		<i class="fa fa-check"></i>
+	</span>
+	<span class="title">
+		verify that lastScanDate is in the last 24 hours
+	</span>
+	<div class="options">
+		<a href="#" class="blue" dialog_id="steps_49cb47ae-7204-403c-b8f6-b83c3c3f4ac5">
+			<i class="fa fa-file-code-o" title="Show story"></i>
+			<span>Story</span>
+		</a>
+		<a href="#" class="green" disabled>
+			<i class="fa fa-history" title="Scenario history"></i>
+			<span>History</span>
+		</a>
+		<a href="#" class="red" disabled dialog_id="errors_49cb47ae-7204-403c-b8f6-b83c3c3f4ac5">
+			<i class="fa fa-times" title="Show errors"></i>
+			<span>Errors</span>
+		</a>
+	</div>
+	<div id="errors_49cb47ae-7204-403c-b8f6-b83c3c3f4ac5" class="dialog-opt dialog-errors">
+		<ul></ul>
+	</div>
+	<div id="steps_49cb47ae-7204-403c-b8f6-b83c3c3f4ac5" class="dialog-opt dialog-steps">
+		<ul><li><span class="keyword">Given</span> using previous returned result</li><li><span class="keyword">Then</span> verify required fileds in array entries with: <table border="1"><body><tr><th>name</th></tr><tr><td>lastScanDate</td></tr></body></table>
+</li><li><span class="keyword">And</span> entries[*].lastScanDate is within the last 24 hours</li></ul>
+	</div>
+</li><li>
+	<span class="icon passed">
+		<i class="fa fa-check"></i>
+	</span>
+	<span class="title">
+		verify vendor score
+	</span>
+	<div class="options">
+		<a href="#" class="blue" dialog_id="steps_1dd0c4d4-9949-40a4-a52b-4622f284f6d3">
+			<i class="fa fa-file-code-o" title="Show story"></i>
+			<span>Story</span>
+		</a>
+		<a href="#" class="green" disabled>
+			<i class="fa fa-history" title="Scenario history"></i>
+			<span>History</span>
+		</a>
+		<a href="#" class="red" disabled dialog_id="errors_1dd0c4d4-9949-40a4-a52b-4622f284f6d3">
+			<i class="fa fa-times" title="Show errors"></i>
+			<span>Errors</span>
+		</a>
+	</div>
+	<div id="errors_1dd0c4d4-9949-40a4-a52b-4622f284f6d3" class="dialog-opt dialog-errors">
+		<ul></ul>
+	</div>
+	<div id="steps_1dd0c4d4-9949-40a4-a52b-4622f284f6d3" class="dialog-opt dialog-steps">
+		<ul><li><span class="keyword">Given</span> using previous returned result</li><li><span class="keyword">Then</span> verify required fileds in array entries with: <table border="1"><body><tr><th>name</th></tr><tr><td>score</td></tr><tr><td>percentile</td></tr><tr><td>grade</td></tr></body></table>
+</li><li><span class="keyword">And</span> the summation in entries should be <table border="1"><body><tr><th>field1</th><th>field2</th><th>value</th></tr><tr><td>score</td><td>percentile</td><td>100</td></tr></body></table>
+</li><li><span class="keyword">And</span> percentile should match grade scoring in entries</li></ul>
+	</div>
+</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
